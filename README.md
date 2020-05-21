@@ -1,4 +1,5 @@
 # vue-next-test
+使用 @vue/cli 4.3.1 搭建的vue3学习
 
 ## Project setup
 ```
