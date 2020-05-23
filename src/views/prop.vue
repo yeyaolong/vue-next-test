@@ -1,7 +1,7 @@
 <template>
     <div class="set-up">               
         <div class="">
-            <h1>直接从prop中取值</h1>
+            <h1>直接从prop中取值, 不需要setup中return后再获取</h1>
             <p>姓名: {{propA.name}}</p>
             <p>年龄: {{propA.age}}</p>
         </div>  
