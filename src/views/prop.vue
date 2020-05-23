@@ -1,10 +1,15 @@
 <template>
     <div class="set-up">               
         <div class="">
-            <ul>
-                
-            </li>        
-        </div>
+            <h1>直接从prop中取值</h1>
+            <p>姓名: {{propA.name}}</p>
+            <p>年龄: {{propA.age}}</p>
+        </div>  
+        <div class="">
+            <h1>使用toRefs展开是无效的</h1>
+             <p>姓名: {{name}}</p>
+            <p>年龄: {{age}}</p>
+        </div>      
     </div>
 </template>
 
@@ -13,6 +18,15 @@ import { computed, toRefs, ref, getCurrentInstance } from 'vue'
 export default {
     name: 'setup',
     props: {
+        propA: {
+            default() {
+                return {
+                    name: '张三',
+                    age: 99
+                }
+            },
+            type: Object
+        }
     },
     setup(props, {emit, attrs, slots}) {
         console.log('this', this)   //undefined, setup中不再有this
@@ -21,7 +35,7 @@ export default {
         const _this = getCurrentInstance(); // 这个是vue2.x意义上的this
         
         return {
-            ...props
+            ...toRefs(props)
         }
     }
 }

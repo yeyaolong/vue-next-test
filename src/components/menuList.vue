@@ -16,11 +16,17 @@ export default {
     setup() {
         const state = reactive({
             menuList: [
+                 
                  {
                     name: 'setup',
                     url: '/setup',
                     id: 'setup'
                 },
+                {
+                     name: 'prop',
+                     url: '/prop',
+                     id: 'prop'
+                 },
                 {
                     name: 'lifecircle',
                     url: '',
