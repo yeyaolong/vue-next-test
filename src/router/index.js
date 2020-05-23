@@ -42,7 +42,13 @@ const routes = [
   path: '/lifecircle',
   name: 'lifecircle',
   component: () => import(/* webpackChunkName: "test" */ '../views/lifecircle.vue')
-}
+},
+{
+  path: '/reactive',
+  name: 'reactive',
+  component: () => import(/* webpackChunkName: "test" */ '../views/reactive.vue')
+},
+
 ]
 
 const router = createRouter({

@@ -16,7 +16,6 @@ export default {
     setup() {
         const state = reactive({
             menuList: [
-                 
                  {
                     name: 'setup',
                     url: '/setup',
@@ -46,7 +45,17 @@ export default {
                     name: 'watch&watchEffect',
                     url: '/watch&watchEffect',
                     id: 'watch&watchEffect'
-                }
+                },
+                {
+                    name: 'computed',
+                    url: 'computed',
+                    id: 'computed'
+                },
+                {
+                    name: 'vuex',
+                    url: '/vuex',
+                    id: '/vuex'
+                },
             ]
         })
 
