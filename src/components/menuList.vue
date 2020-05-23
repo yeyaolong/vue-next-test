@@ -23,32 +23,30 @@ export default {
                     id: 'setup'
                 },
                 {
+                    name: 'lifecircle',
+                    url: '/lifecircle',
+                    id: 'lifecircle'
+                },
+                {
                      name: 'prop',
                      url: '/prop',
                      id: 'prop'
-                 },
+                },                               
                 {
-                    name: 'lifecircle',
-                    url: '',
-                    id: 'lifecircle'
-                },
-               
-                 {
                     name: 'reactive',
-                    url: '',
+                    url: '/reactive',
                     id: 'reactive'
                 },
                 {
                     name: 'ref',
-                    url: '',
+                    url: '/ref',
                     id: 'ref'
                 },
                 {
                     name: 'watch&watchEffect',
-                    url: '',
+                    url: '/watch&watchEffect',
                     id: 'watch&watchEffect'
                 }
-                
             ]
         })
 
