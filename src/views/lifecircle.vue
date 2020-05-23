@@ -5,10 +5,34 @@
 </template>
 
 <script>
+import { computed, toRefs, ref, getCurrentInstance, onBeforeMount, onMounted, onBeforeUpdate, onBeforeUnmount, onUnmounted, onErrorCaptured, } from 'vue'
+
 export default {
     name: 'life-circle',
     setup() {
-        
+          onBeforeMount() {
+            console.log('onBeforeMount')
+        }
+
+        onMounted() {
+            console.log('onMounted')
+        }
+
+        onBeforeUpdate() {
+            console.log('onBeforeUpdate')
+        }
+
+        onBeforeUnmount() {
+            console.log('onBeforeUnmount')
+        }
+
+        onUnmounted() {
+            console.log('onUnmounted')
+        }
+
+        onErrorCaptured() {
+            console.log('onErrorCaptured')
+        }
     }
 
 }
