@@ -18,7 +18,7 @@ export default {
         const state = reactive({
             menuList: [
                 {
-                    name: 'lifecircle',
+                    name: '生命周期',
                     url: '/lifecircle',
                     id: 'lifecircle'
                 },
@@ -26,10 +26,9 @@ export default {
                     name: 'setup',
                     url: '/setup',
                     id: 'setup'
-                },
-                
+                },                
                 {
-                     name: 'prop',
+                     name: 'prop&emit',
                      url: '/prop',
                      id: 'prop'
                 },                               
