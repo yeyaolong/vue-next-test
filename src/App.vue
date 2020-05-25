@@ -1,8 +1,9 @@
 <template>
   <div class="app">
+    <app-header></app-header>
     <div id="nav" class="nav">
       <menu-list></menu-list>
-    </div>
+    </div>    
     <div class="router-view-container">
       <router-view/>
     </div>    
@@ -11,10 +12,12 @@
 
 <script>
 import MenuList from '@/components/menuList.vue';
+import APPHeader from '@/components/header.vue';
 export default {
   setup() {},
   components: {
-    MenuList
+    MenuList,
+    'app-header': APPHeader
   }
 }
 </script>
@@ -26,7 +29,7 @@ export default {
   margin: 0;
 }
 .app {
-  display: flex;
+  display: block;
   flex-direction: row;
 }
 #app {
@@ -41,11 +44,20 @@ export default {
   width: 20%;
   overflow: hidden;
   text-align: left;
-  padding-left: 12px;
 }
 
 .router-view-container {
-  width: 80%;
+  display: flex;
+  // align-items: center;
+  // justify-content: center;
+  position: absolute;
+  left: 255px;
+  top: 75px;
+  bottom: 0;
+  padding-left: 10px;
+  width: calc(100% - 255px);
+  background: #f5f5f5;
+  border-top: 1px solid #ededed;
 }
 
 .nav, .router-view-container {

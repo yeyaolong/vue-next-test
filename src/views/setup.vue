@@ -1,10 +1,14 @@
 <template>
-    <div class="set-up"> 
-        <h1>vue3使用setup()这种函数而不是原来的options作配置型</h1> 
-                这使得代码复用更为简单:
-                    setup()中的代码更加容易抽离出来,而options中则需要用mixins去作代码混入.一些没有必要用到的配置项也会被混入进来.    
+    <div class="set-up">
+        <div class="title">
+            <h1>vue3使用setup()这种函数而不是原来的options作配置型</h1> 
+        </div>
+        <div class="description">
+            这使得代码复用更为简单:
+                    setup()中的代码更加容易抽离出来,而options中则需要用mixins去作代码混入.一些没有必要用到的配置项也会被混入进来.
+        </div>            
         <div class="demo">
-            <p>count的值为{{count}}</p>
+            <p>count的值为: {{count}}</p>
             <button @click="add">+ 1 </button>
             <button @click="descrease">- 1 </button>
         </div>
@@ -60,5 +64,29 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.set-up {
+    // display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content:flex-start;
+    width: 100%;
+}
 
+.title {
+    padding-top: 36px;
+}
+
+.description {
+    padding-top: 24px;
+}
+
+.demo {
+    display: block;
+    padding-top: 64px;
+    font-size: 32px;
+    button {
+        padding: 12px 24px;
+        margin: 12px;
+    }
+}
 </style>
