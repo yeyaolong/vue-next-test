@@ -4,9 +4,10 @@
             <h1>直接从prop中取值, 不需要setup中return后再获取</h1>
             <p>姓名: {{propA.name}}</p>
             <p>年龄: {{propA.age}}</p>
+            <button @click="addAge">加一岁emit</button>
         </div>  
         <div class="">
-            <h1>使用toRefs展开是无效的</h1>
+            <h1>不要使用ES6的对象扩展运算符</h1>
              <p>姓名: {{name}}</p>
             <p>年龄: {{age}}</p>
         </div>      
@@ -29,9 +30,15 @@ export default {
         }
     },
     setup(props, {emit, attrs, slots}) {
-        
+        // console.log('props 不可以当作reactive使用！！！,因为reactive可以用扩展运算符展开，而props不行', props, ...props);
+
+        const addAge = () => {
+            emit('addAge', {currentAge: props.propA.age});
+        }
         return {
-            ...toRefs(props)
+            addAge
+            // ...toRefs(props)
+            // ...props
         }
     }
 }

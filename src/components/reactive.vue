@@ -1,9 +1,11 @@
 <template>
     <div class="reactive">
-        <h1 class="name">{{student.name}}</h1>
-        <div class="grade" v-for="(grade, index) in student.gradeList" :key="index">
-            <span class="subject">学科: {{grade.subject}}</span>
-            <span class="grade">成绩: {{grade.grade}}</span>
+        <div class="demo01">
+            <div class="name">{{student.name}}</div>
+            <div class="grade" v-for="(grade, index) in student.gradeList" :key="index">
+                <span class="subject">学科: {{grade.subject}}</span>
+                <span class="grade">成绩: {{grade.grade}}</span>
+            </div>
         </div>
     </div>
 </template>
@@ -36,6 +38,9 @@ export default {
 
 <style lang="less" scoped>
 .grade {
+    .name {
+        font-size: 32px;
+    }
     .subject, .grade {
         display: inline-block;
     }

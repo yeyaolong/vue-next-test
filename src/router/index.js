@@ -44,11 +44,15 @@ const routes = [
   component: () => import(/* webpackChunkName: "test" */ '../views/lifecircle.vue')
 },
 {
-  path: '/reactive',
-  name: 'reactive',
-  component: () => import(/* webpackChunkName: "test" */ '../views/reactive.vue')
+  path: '/responsive',
+  name: 'responsive',
+  component: () => import(/* webpackChunkName: "test" */ '../views/responsive.vue')
 },
-
+{
+  path: '/computed',
+  name: 'computed',
+  component: () => import(/* webpackChunkName: "test" */ '../views/computed')
+}
 ]
 
 const router = createRouter({

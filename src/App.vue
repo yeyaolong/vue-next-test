@@ -50,6 +50,7 @@ export default {
   display: flex;
   // align-items: center;
   // justify-content: center;
+  overflow: auto;
   position: absolute;
   left: 255px;
   top: 75px;

@@ -8,7 +8,7 @@
                     setup()中的代码更加容易抽离出来,而options中则需要用mixins去作代码混入.一些没有必要用到的配置项也会被混入进来.
         </div>            
         <div class="demo">
-            <p>count的值为: {{count}}</p>
+            <p class="name">count的值为: {{count}}</p>
             <button @click="add">+ 1 </button>
             <button @click="descrease">- 1 </button>
         </div>
@@ -36,11 +36,10 @@ export default {
     props: {
     },
     setup(props, {emit, attrs, slots}) {
-        
         console.log('setup中this的值为', this)   //undefined, setup中不再有this
         // setup的 第二个参数 {} 代替了 this，它的解构赋值如上所示
         // 如果你要获得vue2.x意义上的this,可以调用
-        const _this = getCurrentInstance(); // 这个是vue2.x意义上的this
+        // const _this = getCurrentInstance(); // 这个是vue2.x意义上的this
         
         let count = ref(0);
 
@@ -80,13 +79,5 @@ export default {
     padding-top: 24px;
 }
 
-.demo {
-    display: block;
-    padding-top: 64px;
-    font-size: 32px;
-    button {
-        padding: 12px 24px;
-        margin: 12px;
-    }
-}
+
 </style>

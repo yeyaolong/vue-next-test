@@ -17,48 +17,45 @@ export default {
     setup(props, params) {
         const state = reactive({
             menuList: [
+                 {
+                    name: 'setup',
+                    url: '/setup',
+                    id: 'setup'
+                },
                 {
                     name: '生命周期',
                     url: '/lifecircle',
                     id: 'lifecircle'
                 },
+                                          
                 {
-                    name: 'setup',
-                    url: '/setup',
-                    id: 'setup'
-                },                
+                    name: '响应式',
+                    url: '/responsive',
+                    id: 'responsive'
+                },               
                 {
-                     name: 'prop&emit',
+                     name: '父子组件传参',
                      url: '/prop',
                      id: 'prop'
-                },                               
-                {
-                    name: 'reactive',
-                    url: '/reactive',
-                    id: 'reactive'
                 },
                 {
-                    name: 'ref',
-                    url: '/ref',
-                    id: 'ref'
+                    name: '计算属性',
+                    url: '/computed',
+                    id: 'computed'
                 },
                 {
                     name: 'watch&watchEffect',
                     url: '/watch&watchEffect',
                     id: 'watch&watchEffect'
                 },
-                {
-                    name: 'computed',
-                    url: 'computed',
-                    id: 'computed'
-                },
+                
                 {
                     name: 'vuex',
                     url: '/vuex',
                     id: '/vuex'
                 },
                 {
-                    name: 'vue-router',
+                    name: '路由',
                     url: '/vue-router',
                     id: '/vue-router'
                 },

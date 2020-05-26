@@ -7,7 +7,7 @@
             
         </div>
         <div class="demo">
-            <p>count的值为：{{count}}</p>
+            <p class="name">count的值为：{{count}}</p>
             <button @click="add"> + 1</button>
             <button @click="descreace"> - 1</button>
         </div>
@@ -23,14 +23,14 @@ export default {
     setup() {
         let _this = getCurrentInstance();
         // onBeforeCreate(() => {
-        //     console.group('setup 中没有 beforCreate 创建前状态===============》');
+        //     console.group('setup 中没有 beforCreate ===============》');
         //     console.log("%c%s", "color:red","el     : " + (_this.$el)); //已被初始化
         //     console.log("%c%s", "color:red","data   : " + _this.$data); //已被初始化  
         //     console.log("%c%s", "color:red","message: " + _this.message); //已被初始化 
         // })
 
         // onCreated(() => {
-        //     console.group('setup中没有created 创建后状态===============》');
+        //     console.group('setup中没有created ===============》');
         //     console.log("%c%s", "color:red","el     : " + (_this.$el)); //已被初始化
         //     console.log("%c%s", "color:red","data   : " + _this.$data); //已被初始化  
         //     console.log("%c%s", "color:red","message: " + _this.message); //已被初始化 
