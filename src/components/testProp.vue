@@ -31,7 +31,7 @@ export default {
     },
     setup(props, {emit, attrs, slots}) {
         // console.log('props 不可以当作reactive使用！！！,因为reactive可以用扩展运算符展开，而props不行', props, ...props);
-
+        console.log('从父组件传来的其它参数：attrs', attrs)
         const addAge = () => {
             emit('addAge', {currentAge: props.propA.age});
         }

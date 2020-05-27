@@ -48,16 +48,20 @@ export default {
                     url: '/watch&watchEffect',
                     id: 'watch&watchEffect'
                 },
-                
+                {
+                    name: '服务端渲染',
+                    url: '/ssr',
+                    id: 'ssr'
+                },
                 {
                     name: 'vuex',
                     url: '/vuex',
-                    id: '/vuex'
+                    id: 'vuex'
                 },
                 {
                     name: '路由',
                     url: '/vue-router',
-                    id: '/vue-router'
+                    id: 'vue-router'
                 },
             ]
         })

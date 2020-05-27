@@ -12,7 +12,7 @@
                 <p>一页10条数据</p>
                 <p>当前页码: {{currentPage}}</p>
             </div>
-                        
+
             <div class="step-config">
                 <p>当前步进值: {{step}}</p>
                 <button @click="setStep(5)">5</button>
@@ -50,7 +50,6 @@ export default {
 
         let currentPage = computed(() => {
             let p = parseInt(page.offset / page.size) + (page.offset % page.size > 0 ? 1 : 0);
-            // console.log('p', p);
             return p;
         })
 
