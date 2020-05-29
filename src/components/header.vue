@@ -23,7 +23,7 @@ export default {
         padding: 15px 15px 15px 20px;
         text-align: left;
         .logo {
-            background: url(/img/logo.82b9c7a5.png) no-repeat;
+            background: url("../assets/logo.png") no-repeat;
             background-size: contain;
             display: inline-block;
             width: 50px;

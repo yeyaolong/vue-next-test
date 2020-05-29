@@ -57,7 +57,13 @@ const routes = [
   path: '/watch&watchEffect',
   name: 'watch&watchEffect',
   component: () => import(/* webpackChunkName: "test" */ '../views/monitor.vue')
-}
+},
+{
+  path: '/vuex',
+  name: 'vuex',
+  component: () => import(/* webpackChunkName: "test" */ '../views/TestVuex.vue')
+},
+
 ]
 
 const router = createRouter({

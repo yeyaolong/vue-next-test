@@ -13,7 +13,7 @@ import { reactive, toRefs, getCurrentInstance } from 'vue'
 import router from '@/router';
 
 export default {
-    name: 'menu',
+    name: 'menu-list',
     setup(props, params) {
         const state = reactive({
             menuList: [
@@ -57,11 +57,11 @@ export default {
                     url: '/vuex',
                     id: 'vuex'
                 },
-                {
-                    name: '路由',
-                    url: '/vue-router',
-                    id: 'vue-router'
-                },
+                // {
+                //     name: '路由',
+                //     url: '/vue-router',
+                //     id: 'vue-router'
+                // },
             ]
         })
 
