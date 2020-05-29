@@ -1,28 +1,31 @@
 <template>
-    <div class="monitor"></div>
+    <div class="monitor">
+        <div class="title">
+            <h1>数据监听</h1>
+        </div>
+        <div class="description">
+            使用watch与watchEffect函数监听数据
+        </div>
+        <div class="demo">
+            <test-watch-effect></test-watch-effect>
+            <test-watch></test-watch>
+        </div>
+    </div>
 </template>
 
 <script>
-import { reactive, watchEffect } from 'vue'
+import { reactive, watchEffect } from 'vue';
+import TestWatchEffect from '@/components/testWatchEffect.vue';
+import TestWatch from '@/components/testWatch.vue';
 export default {
     setup() {
-        let state = reactive({
-            name: '张三',
-            age: 17,
-            grade: 90
-        })
+       
+        // return state
+    },
 
-        watchEffect(() => {
-            console.log(`张三的年龄是${state.age}`);
-        },{
-            flush: 'post',
-            onTrack: () => {
-                console.log('onTrack')
-            },
-            onTrigger: () => {}
-        })
-
-        return state
+    components: {
+        TestWatchEffect,
+        TestWatch
     }
 }
 </script>

@@ -27,7 +27,6 @@ export default {
                     url: '/lifecircle',
                     id: 'lifecircle'
                 },
-                                          
                 {
                     name: '响应式',
                     url: '/responsive',
@@ -44,7 +43,7 @@ export default {
                     id: 'computed'
                 },
                 {
-                    name: 'watch&watchEffect',
+                    name: '监听',
                     url: '/watch&watchEffect',
                     id: 'watch&watchEffect'
                 },

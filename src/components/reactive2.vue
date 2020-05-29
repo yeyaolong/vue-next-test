@@ -34,10 +34,12 @@ export default {
         const addEnglishGrade = () => {
             state.student.gradeList[0].grade = state.student.gradeList[0].grade + 10;
         }
+        // console.log('...toRefs(state)', ...toRefs(state))
+        // console.log('...state', ...state)
 
         return {            
             addEnglishGrade,
-            // ...state,    // 也可以直接用ES6做 扩展运算
+            // ...state,    // 不可以直接用ES6做 扩展运算，虽然可以正常渲染，但是后续改变值，template中的内容不会重新渲染
             ...toRefs(state) // 可以调用toRefs方法转化为ref型变量
         }
         
