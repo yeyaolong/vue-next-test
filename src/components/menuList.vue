@@ -48,9 +48,9 @@ export default {
                     id: 'watch&watchEffect'
                 },
                 {
-                    name: '服务端渲染',
-                    url: '/ssr',
-                    id: 'ssr'
+                    name: '只读属性',
+                    url: '/readonly',
+                    id: 'readonly'
                 },
                 {
                     name: 'vuex',

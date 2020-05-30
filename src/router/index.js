@@ -63,6 +63,11 @@ const routes = [
   name: 'vuex',
   component: () => import(/* webpackChunkName: "test" */ '../views/TestVuex.vue')
 },
+{
+  path: '/readonly',
+  name: 'readonly',
+  component: () => import(/* webpackChunkName: "test" */ '../views/testReadOnly.vue')
+},
 
 ]
 
