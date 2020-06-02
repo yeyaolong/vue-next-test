@@ -11,7 +11,9 @@
             <p class="name">count的值为: {{count}}</p>
             <button @click="add">+ 1 </button>
             <button @click="descrease">- 1 </button>
+
         </div>
+
     </div>
 </template>
 
@@ -34,9 +36,9 @@ export {
 export default {
     name: 'setup',
     props: {
-    },
+    },    
     setup(props, {emit, attrs, slots}) {
-        console.log('setup中this的值为', this)   //undefined, setup中不再有this
+        console.log('setup中this的值为:', this)   //undefined, setup中不再有this
         // setup的 第二个参数 {} 代替了 this，它的解构赋值如上所示
         // 如果你要获得vue2.x意义上的this,可以调用
         // const _this = getCurrentInstance(); // 这个是vue2.x意义上的this
