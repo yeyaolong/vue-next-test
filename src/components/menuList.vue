@@ -57,6 +57,11 @@ export default {
                     url: '/vuex',
                     id: 'vuex'
                 },
+                {
+                    name: 'array',
+                    url: '/array',
+                    id: 'array'
+                }
                 // {
                 //     name: '路由',
                 //     url: '/vue-router',

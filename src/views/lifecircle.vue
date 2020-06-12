@@ -37,14 +37,14 @@ export default {
         // }) 
 
         onBeforeMount(() => {
-            console.group('beforeMount 挂载前状态===============》');
+            console.group('onbeforeMount 挂载前状态===============》');
             console.log("%c%s", "color:red","el     : " + (_this.$el)); //已被初始化
             console.log("%c%s", "color:red","data   : " + _this.$data); //已被初始化  
             console.log("%c%s", "color:red","message: " + _this.message); //已被初始化 
         })
 
         onMounted(() => {
-            console.group('mounted 挂载结束状态===============》');
+            console.group('onmounted 挂载结束状态===============》');
             console.log("%c%s", "color:red","el     : " + _this.$el); //已被初始化
             console.log("%c%s", "color:red","data   : " + _this.$data); //已被初始化
             console.log("%c%s", "color:red","message: " + _this.message); //已被初始化
@@ -111,6 +111,9 @@ export default {
     },
     beforeUpdate() {
         console.log('setup外部的钩子函数beforeUpdate')
+    },
+    updated() {
+        console.log('setup外部的钩子函数updated')
     },
     activated() {
         console.log('setup外部的钩子函数activated')

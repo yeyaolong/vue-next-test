@@ -54,6 +54,11 @@ const routes = [
   component: () => import(/* webpackChunkName: "test" */ '../views/computed')
 },
 {
+  path: '/array',
+  name: 'arry',
+  component: () => import(/* webpackChunkName: "test" */ '../views/testArray.vue')
+},
+{
   path: '/watch&watchEffect',
   name: 'watch&watchEffect',
   component: () => import(/* webpackChunkName: "test" */ '../views/monitor.vue')

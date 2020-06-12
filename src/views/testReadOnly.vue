@@ -7,8 +7,8 @@
             readonly 型数据无法被改变
         </div>
         <div class="demo">
-            <p class="name">{{name}}</p>
-            <p>分数: {{grade}}</p>
+            <p class="name">{{temp.name}}</p>
+            <p>分数: {{temp.grade}}</p>
             <button @click="add">+ 1 </button>
             <button @click="descrease">- 1 </button>
         </div>

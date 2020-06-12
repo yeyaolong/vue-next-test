@@ -41,8 +41,8 @@ export default {
         console.log('setup中this的值为:', this)   //undefined, setup中不再有this
         // setup的 第二个参数 {} 代替了 this，它的解构赋值如上所示
         // 如果你要获得vue2.x意义上的this,可以调用
-        // const _this = getCurrentInstance(); // 这个是vue2.x意义上的this
-        
+        // const _this = getCurrentInstance(); // 这个并不是vue2.x意义上的this，
+        // console.log('this', _this);  // 这里的this
         let count = ref(0);
 
         const add = () => addFnCallback(count)
