@@ -71,6 +71,7 @@ export default {
         })
 
         let _this = getCurrentInstance();
+        console.error('_this getCurrentInstance', _this);
         const changeRouter = (item) => {
             router.push(item.url)
         }

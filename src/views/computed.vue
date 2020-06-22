@@ -22,6 +22,7 @@
             
             <button @click="prev">上{{step}}条数据</button>
             <button @click="next">下{{step}}条数据</button>
+            <button @click="handleSet">手动修改到第10页</button>
             
         </div>
     </div>
@@ -65,6 +66,10 @@ export default {
             page.offset = page.offset + step.value;
         }
 
+        const handleSet = () => {
+            currentPage.value = 10;
+        }
+
         return {
             // 数据
             offset,
@@ -74,7 +79,8 @@ export default {
             // 函数
             setStep,
             next,
-            prev
+            prev,
+            handleSet
         }
 
     }

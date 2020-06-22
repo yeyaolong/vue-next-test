@@ -6,6 +6,7 @@
             <p>年龄: {{age}}</p>
             <p>分数: {{grade}}</p>
             <button @click="addGrade">加10分</button>
+            <button @click="stopWatch">停止监听</button>
         </div>  
     </div>
 </template>
@@ -23,6 +24,7 @@ export default {
 
         const addGrade = () => {
             state.grade += 10;
+            
         }
 
         let flush = 'sync'; // 'post' || 'sync' || 'pre'
@@ -33,6 +35,7 @@ export default {
 
         const watchHandler = (value, oldVal, invalidateFn) => {
             console.log(`watchHandler 新数据${value} 旧数据${oldVal}`);
+            alert('watch')
         }
 
         const options = {
@@ -47,7 +50,12 @@ export default {
             deep: true
         }
 
-        watch(state, watchHandler, options)
+        let stop = watch(state, watchHandler, options)
+
+        const stopWatch = () => {
+            alert('停止监听')
+            stop();
+        }
 
         onBeforeUpdate(() => {
             console.log('onBeforeUpdate');
@@ -61,7 +69,8 @@ export default {
             // 数据
             ...toRefs(state),
             // 函数
-            addGrade
+            addGrade,
+            stopWatch
         }
 
     }

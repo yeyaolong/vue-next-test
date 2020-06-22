@@ -1,0 +1,3 @@
+<template>
+    <Teloport></Teleport>
+</template>

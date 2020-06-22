@@ -6,6 +6,7 @@
             <p>年龄: {{age}}</p>
             <p>分数: {{grade}}</p>
             <button @click="addGrade">加10分</button>
+            <button @click="stopWatch">停止监听</button>
         </div>  
     </div>
 </template>
@@ -15,6 +16,7 @@ import {reactive, watchEffect, onBeforeUpdate, onUpdated, toRefs} from 'vue';
 
 export default {
     setup() {
+        // 模块A
         let state = reactive({
             name: '张三',
             age: 17,
@@ -27,8 +29,9 @@ export default {
 
         let flush = 'sync'; // 'post' || 'sync' || 'pre'
 
-        watchEffect(() => {
+        let stop = watchEffect(() => {
             console.log(`张三的分数是${state.grade}`);
+            alert(`张三的分数是${state.grade}`);
         },{
             flush: flush,
             onTrack: () => {
@@ -39,6 +42,11 @@ export default {
             }
         });
 
+        const stopWatch = () => {
+            alert('停止监听')
+            stop();
+        }
+
         onBeforeUpdate(() => {
             console.log('onBeforeUpdate');
         })
@@ -47,11 +55,14 @@ export default {
             console.log('onUpdated');
         })
 
+        
+
         return {
             // 数据
             ...toRefs(state),
             // 函数
-            addGrade
+            addGrade,
+            stopWatch
         }
     }
 }
